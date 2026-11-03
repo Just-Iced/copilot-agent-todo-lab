@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple task list for the COMP 4976 GitHub Copilot Cloud Agent lab.">
+  <title>TaskFlow – To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow"><span class="brand-mark" aria-hidden="true">✓</span> COMP 4976 · CLASSROOM LAB</p>
+      <h1>TaskFlow <span>– To-Do List</span></h1>
+      <p class="intro">A little focus. A little progress. One task at a time.</p>
+    </header>
+
+    <section class="workspace" aria-label="Task manager">
+      <form id="task-form">
+        <label for="task-input">What’s on your list?</label>
+        <div class="input-group">
+          <input id="task-input" name="task" type="text" placeholder="e.g. Review COMP 4976 notes" autocomplete="off">
+          <button type="submit"><span aria-hidden="true">＋</span> Add Task</button>
+        </div>
+      </form>
+
+      <div class="list-heading">
+        <h2>Your tasks</h2>
+        <span id="task-counter" role="status" aria-live="polite">0 tasks</span>
+      </div>
+      <div id="empty-state">
+        <span class="empty-icon" aria-hidden="true">✓</span>
+        <p>A fresh start.</p>
+        <span>Add your first task above to get things moving.</span>
+      </div>
+      <ul id="task-list" aria-label="Your tasks"></ul>
+      <p id="storage-status" class="storage-status" role="status" hidden></p>
+    </section>
+
+    <footer>COMP 4976 <span aria-hidden="true">·</span> GitHub Copilot Cloud Agent Lab</footer>
+  </main>
+</body>
+</html>
